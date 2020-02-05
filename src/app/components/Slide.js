@@ -8,7 +8,7 @@ const Slide = (props) => {
       <div className="content-slide">
         <div className="content-slide-image">
           <Image 
-            path="/assets/images/"
+            path="/assets/images/pope/"
             name="pope"
             format="png"
             alt="pope"

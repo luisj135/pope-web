@@ -18,6 +18,7 @@ const Image = (props) => {
                 img{
                     width: 100vw;
                     object-fit: cover;
+                    height: 50rem;
                 }
             `}</style>
         </React.Fragment>
