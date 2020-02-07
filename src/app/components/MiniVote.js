@@ -15,12 +15,14 @@ const Notifications = (props) => {
       },
       images:[
         {
-          mini: 'kanie-west/kanie-west.png',
-          big: 'kanie-west/kanie-west.big.png'
+          path: 'kanie-west',
+          mini: 'kanie-west',
+          big: 'kanie-west.big'
         },
         {
-          mini: 'kanie-west/kanye-west-mini.png',
-          big: 'kanie-west/kanie-west.big.png'
+          path: 'kanie-west',
+          mini: 'kanye-west-mini',
+          big: 'kanie-west.big'
         }
       ]
     },
@@ -35,12 +37,14 @@ const Notifications = (props) => {
       },
       images:[
         {
-          mini: 'mark-zuckerberg/mark.png',
-          big: 'mark-zuckerberg/mark-zuckerberg.big'
+          path: 'mark-zuckerberg',
+          mini: 'mark',
+          big: 'mark-zuckerberg.big'
         },
         {
-          mini: 'mark-zuckerberg/mark-zukerberg-mini.png',
-          big: 'mark-zuckerberg/mark-zuckerberg.big'
+          path: 'mark-zuckerberg',
+          mini: 'mark-zukerberg-mini',
+          big: 'mark-zuckerberg.big'
         }
       ]
     },
@@ -55,12 +59,14 @@ const Notifications = (props) => {
       },
       images:[
         {
-          mini: 'cristina/cristina.png',
-          big: 'cristina/kirchner.big.jpg'
+          path: 'cristina',
+          mini: 'cristina',
+          big: 'kirchner.big'
         },
         {
-          mini: 'cristina/cristina-kirchner-mini.png',
-          big: 'cristina/kirchner.big.jpg'
+          path: 'cristina',
+          mini: 'cristina-kirchner-mini',
+          big: 'kirchner.big'
         }
       ]
     },
@@ -75,12 +81,14 @@ const Notifications = (props) => {
       },
       images:[
         {
-          mini: 'malala/malala.png',
-          big: 'malala/malala.big.jpg'
+          path: 'malala',
+          mini: 'malala',
+          big: 'malala.big'
         },
         {
-          mini: 'malala/malala-mini.png',
-          big: 'malala/malala.big.jpg'
+          path: 'malala',
+          mini: 'malala-mini',
+          big: 'malala.big'
         }
       ]
     },
@@ -96,7 +104,7 @@ const Notifications = (props) => {
                   return (
                     <div className="col s6">
                       <ItemVote 
-                        dataItem = "item"
+                        dataItem = {item}
                       />
                     </div>
                   )

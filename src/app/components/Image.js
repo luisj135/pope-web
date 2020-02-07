@@ -16,7 +16,7 @@ const Image = (props) => {
             />
             <style jsx>{`
                 img{
-                    width: 100vw;
+                    width: 100%;
                     object-fit: cover;
                     height: 50rem;
                 }
