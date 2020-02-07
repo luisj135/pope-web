@@ -3,18 +3,23 @@ import Image from '../components/Image';
 
 const Notifications = (props) => {
     const decripmini = props.dataItem.description.substring(0,120)
+    const total = +props.dataItem.vote.like + +props.dataItem.vote.dislike
+    const styleLike = +props.dataItem.vote.like * 100/total
+    const styledisLike = +props.dataItem.vote.dislike * 100/total
+    const roundLike = props.dataItem.vote.like > props.dataItem.vote.dislike
   return (
     <React.Fragment>
         <div className="content-items">
             <div className="content-images mini-images">
                 {
-                    props.dataItem.images.map((ImaItem)=>{
+                    props.dataItem.images.map((ImaItem, k)=>{
                         return(
                             <Image 
                                 path={`/assets/images/${ImaItem.path}/`}
                                 name={ImaItem.mini}
                                 format="png"
                                 alt={ImaItem.mini}
+                                key={k}
                             />
                         )
                     })
@@ -25,12 +30,18 @@ const Notifications = (props) => {
                 <div className="content-txt-block">
                     <div className="content-row">
                         <div className="content-item-vote">
-                            <div className="col s6 icon like-link">
-                                <i className="fa fa-thumbs-o-up"></i>
-                            </div>
-                            <div className="col s6 icon dislike-link">
-                                <i className="fa fa-thumbs-o-down"></i>
-                            </div>
+                            {
+                                roundLike &&
+                                <div className="col s6 icon like-link">
+                                    <i className="fa fa-thumbs-o-up"></i>
+                                </div>
+                            }
+                            {
+                                !roundLike &&
+                                <div className="col s6 icon dislike-link">
+                                    <i className="fa fa-thumbs-o-down"></i>
+                                </div>
+                            }
                         </div>
                         <div className="content-title">
                             { props.dataItem.title}
@@ -92,7 +103,7 @@ const Notifications = (props) => {
                 transition: all 20s linear;
             }
 
-            :global(.content-items .mini-images:hover img:nth-child(2)){
+            :global(.content-items .content-block-content:hover :has(.mini-images img:nth-child(2))){
                 display:inline;
             }
 
@@ -126,10 +137,11 @@ const Notifications = (props) => {
                 justify-content: flex-end;
                 align-content: center;
                 align-items: flex-start;
+                width:100%;
             }
 
             .content-txt-block{
-                
+                width:100%;
             }
 
             .content-row{
@@ -149,6 +161,7 @@ const Notifications = (props) => {
 
             .content-row:nth-child(1){
                 justify-content:flex-start;
+                margin-bottom:0.4rem;
             }
 
             .content-title{
@@ -160,6 +173,7 @@ const Notifications = (props) => {
                 letter-spacing: normal;
                 text-align: left;
                 color: #ffffff;
+                margin-left:0.4rem;
             }
 
             .content-description{
@@ -171,7 +185,7 @@ const Notifications = (props) => {
                 letter-spacing: normal;
                 text-align: left;
                 color: #ffffff;
-                padding:0rem 1.3125rem;
+                padding:0rem 2rem;
             }
 
             .content-time h6{
@@ -186,7 +200,7 @@ const Notifications = (props) => {
             }
 
             .content-row:nth-child(3){
-                padding:1rem 1.3125rem;
+                padding:1rem 1rem 1rem 2rem;
             }
 
             .content-row:nth-child(3) .content-btn{
@@ -199,11 +213,44 @@ const Notifications = (props) => {
             }
 
             .content-row:nth-child(4) .content-votes-bar .content-like{
-                background-color: #1cbbb4;
+                background-color: rgb(28, 187, 180, 0.6);
+                width:${styleLike}%;
+                padding:0.375rem;
+                display:flex;
+                flex-direction:row;
+                justify-content:flex-start;
+                align-content:center;
+                align-items:center;
             }
 
             .content-row:nth-child(4) .content-votes-bar .content-dislike{
-                background-color: #ffad1d;
+                background-color: rgb(255, 173, 29, 0.6);
+                width:${styledisLike}%;
+                padding:0.375rem;
+                display:flex;
+                flex-direction:row;
+                justify-content:flex-end;
+                align-content:center;
+                align-items:center;
+            }
+
+            .content-row:nth-child(4) .content-votes-bar .content-like i {
+                padding:0rem 0.375rem;
+            }
+
+            .content-row:nth-child(4) .content-votes-bar .content-dislike i {
+                padding:0rem 0.375rem;
+            }
+
+            .content-row .content-item-vote .like-link{
+                background-color: rgb(28, 187, 180, 0.6);
+                width: 100%;
+            }
+
+            .content-row .content-item-vote .dislike-link{
+                background-color: rgb(255, 173, 29, 0.6);
+                width: 100%;
+                padding: 0.1rem 0.3rem;
             }
 
         `}</style>

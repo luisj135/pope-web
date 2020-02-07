@@ -100,11 +100,12 @@ const Notifications = (props) => {
           <div className="row">
             <div className="content-grid">
               {
-                items.map((item) => {
+                items.map((item, k) => {
                   return (
-                    <div className="col s6">
+                    <div className="col s12 m6 l6">
                       <ItemVote 
                         dataItem = {item}
+                        key={k}
                       />
                     </div>
                   )
