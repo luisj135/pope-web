@@ -301,6 +301,15 @@ const Slide = (props) => {
           padding: 0rem 0.5rem;
           opacity: 1;
         }
+
+        @media only screen 
+          and (min-device-width: 320px) 
+          and (max-device-width: 480px)
+          and (-webkit-min-device-pixel-ratio: 2) {
+            .content-bg-col {
+              max-width: 100%;
+            }
+        }
       `}</style>
     </React.Fragment>
   )

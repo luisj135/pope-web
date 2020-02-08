@@ -76,7 +76,7 @@ const Notifications = (props) => {
             </div>
         </div>
         <style jsx>{`
-            .content-items{
+            :global(.content-items){
                 position:relative;
                 margin-bottom:1.25rem;
             }
@@ -123,7 +123,7 @@ const Notifications = (props) => {
                 background: -ms-linear-gradient(top, rgba(76,76,76,0) 0%, rgba(19,19,19,0.65) 100%);
                 background: linear-gradient(to bottom, rgba(76,76,76,0) 0%, rgba(19,19,19,0.65) 100%);
                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=0 );
-                z-index:9;
+                z-index:1;
             }
 
             .content-block-content{
@@ -138,6 +138,7 @@ const Notifications = (props) => {
                 align-content: center;
                 align-items: flex-start;
                 width:100%;
+                z-index:5;
             }
 
             .content-txt-block{

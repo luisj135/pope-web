@@ -24,6 +24,9 @@ const Header = ({ pathname }) => (
             preventScrolling: true
           }}
         >
+          <NavItem href="/">
+            Home
+          </NavItem>
           <NavItem href={`${pathname}`}>
             Past Trials
           </NavItem>
