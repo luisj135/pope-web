@@ -32,7 +32,7 @@ Image.defaultProps = {
     alt: 'default',
 }
 
-Image.PropTypes = {
+Image.propTypes = {
     path: PropTypes.string,
     name: PropTypes.string,
     format: PropTypes.string,

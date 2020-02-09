@@ -102,10 +102,9 @@ const Notifications = (props) => {
               {
                 items.map((item, k) => {
                   return (
-                    <div className="col s12 m6 l6">
+                    <div className="col s12 m6 l6" key={k}>
                       <ItemVote 
                         dataItem = {item}
-                        key={k}
                       />
                     </div>
                   )
