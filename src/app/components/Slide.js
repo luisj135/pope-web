@@ -1,8 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import { addRatePost, addDisRatePost } from '../store/dataPost/action'
+
 import Link from 'next/link';
 import Image from '../components/Image'
 
 const Slide = (props) => {
+  const [vote, setVote] = useState(false);
+  const [sel, setSel] = useState(true);
+  const [showmsn, setShowmsn] = useState(false);
+
+  const showVote = (value) =>{
+    setVote(value);
+  }
+
+  const updateVote = () =>{
+    if(sel){
+      props.addUpdateRateLike(`${props.dataSel}`)
+    }else{
+      props.addUpdateRateDisLike(`${props.dataSel}`)
+    }
+    setVote(false)
+    setShowmsn(true)
+  }
+
+  console.log(vote)
   return (
     <React.Fragment>
       <div className="content-slide">
@@ -33,13 +56,41 @@ const Slide = (props) => {
                   </div>
                   <div className="content-vote-items">
                     <div className="row">
-                      <div className="col s6 icon like-link">
+                      <div className={`col s6 icon like-link ${sel && vote ?'like-vote':''}`} onClick={()=>{showVote(true), setSel(true)}}>
                         <i className="fa fa-thumbs-o-up"></i>
                       </div>
-                      <div className="col s6 icon dislike-link">
+                      <div className={`col s6 icon dislike-link ${!sel && vote ?'dislike-vote':''}`} onClick={()=>{showVote(true), setSel(false)}}>
                         <i className="fa fa-thumbs-o-down"></i>
                       </div>
-                    </div>   
+                    </div>  
+                    {
+                      vote && !showmsn &&
+                      <div className="row">
+                        <div className="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+                          <div className="content-btn" onClick={()=>{updateVote()}}>
+                              <p>Vote now</p>
+                          </div>
+                        </div> 
+                      </div>   
+                    }
+                    {
+                      !vote && showmsn &&
+                      <div className="row">
+                        <div className="col s12">
+                          <div className="col s10 offset-s1 m6 l6">
+                            <p>“Thank you for voting!”</p>
+                          </div>
+                          <div className="col s10 offset-s1 m6 l6">
+                            <div className="content-btn" onClick={()=>{
+                                setVote(false)
+                                setShowmsn(false)
+                              }}>
+                                <p>Vote again</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div> 
+                    }
                   </div>
                 </div>
               </div>
@@ -302,6 +353,31 @@ const Slide = (props) => {
           opacity: 1;
         }
 
+        .content-btn{
+          margin: 1rem 0.4rem;
+          padding: 0.2rem 0.4rem;
+          border:1px solid white;
+        }
+
+        .content-btn p{
+          text-align:center;
+          margin:0rem;
+          padding:0.5rem;
+        }
+
+        .content-btn:hover{
+          background-color:white;
+          cursor:pointer;
+        }
+
+        .content-btn:hover p{
+          color:rgba(91,92,96,0.5);
+        }
+
+        .like-vote, .dislike-vote{
+          border-bottom:1px solid white;
+        }
+
         @media only screen 
           and (min-device-width: 320px) 
           and (max-device-width: 480px)
@@ -315,4 +391,21 @@ const Slide = (props) => {
   )
 };
 
-export default Slide;
+Slide.getInitialProps = async ({ store, isServer }) => {
+  return { isServer }
+}
+
+const mapStateToProps = (reducer) =>{
+  return {
+    datainitial: reducer.dataPost,
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    addUpdateRateLike: bindActionCreators(addRatePost, dispatch),
+    addUpdateRateDisLike: bindActionCreators(addDisRatePost, dispatch),
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Slide)

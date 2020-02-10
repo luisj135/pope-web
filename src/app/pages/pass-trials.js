@@ -1,16 +1,17 @@
-import * as React from 'react';
-import App from '../components/App';
+import React, { useEffect } from 'react'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import { addPost } from '../store/dataPost/action'
+
 import Header from '../components/Header';
-import Slide from '../components/slide';
-import Notifications from '../components/Notifications';
 import Titile from '../components/Title';
 import MiniVote from '../components/MiniVote';
 
-export default () => (
-  <App>
+const Passtrials = props => {
+  return (
     <React.Fragment>
       <div className="content-header">
-        <Header pathname="#"/>
+        <Header pathname="/"/>
       </div>
       <div className="container">
         <div className="row">
@@ -40,5 +41,27 @@ export default () => (
 
       `}</style>
     </React.Fragment>
-  </App>
-);
+  )
+};
+
+Passtrials.getInitialProps = async ({ store, isServer }) => {
+  console.log(store)
+  store.dispatch(addPost(dataInitial))
+  //store.dispatch(addCount())
+  return { isServer }
+}
+
+const mapStateToProps = (reducer) =>{
+  return {
+    datainitial: reducer.dataPost,
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    addPostInitialData: bindActionCreators(addPost, dispatch),
+    // startClock: bindActionCreators(startClock, dispatch),
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Passtrials)
