@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[10],{"46tO":function(n,u,t){(window.__NEXT_P=window.__NEXT_P||[]).push(["/about",function(){return t("Juyh")}])},Juyh:function(n,u,t){"use strict";t.r(u);var o=t("ERkP"),e=o.createElement;u.default=function(){return e(App,null,e("p",null,"About Page"))}}},[["46tO",1,2,0]]]);

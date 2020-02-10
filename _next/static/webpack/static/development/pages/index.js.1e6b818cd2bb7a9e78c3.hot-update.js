@@ -1,0 +1,331 @@
+webpackHotUpdate("static/development/pages/index.js",{
+
+/***/ "./pages/index.js":
+/*!************************!*\
+  !*** ./pages/index.js ***!
+  \************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "../../node_modules/@babel/runtime-corejs2/regenerator/index.js");
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "../../node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-jsx/style */ "../../node_modules/styled-jsx/style.js");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "../../node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! redux */ "../../node_modules/redux/es/redux.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-redux */ "../../node_modules/react-redux/es/index.js");
+/* harmony import */ var _store_dataPost_action__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../store/dataPost/action */ "./store/dataPost/action.js");
+/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Header */ "./components/Header.js");
+/* harmony import */ var _components_slide__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/slide */ "./components/slide.js");
+/* harmony import */ var _components_Notifications__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/Notifications */ "./components/Notifications.js");
+/* harmony import */ var _components_Title__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/Title */ "./components/Title.js");
+/* harmony import */ var _components_MiniVote__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/MiniVote */ "./components/MiniVote.js");
+/* harmony import */ var _components_dataInitial__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/dataInitial */ "./components/dataInitial.js");
+
+
+var _jsxFileName = "/Applications/MAMP/htdocs/zemoga/pope-web/src/app/pages/index.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement;
+
+
+
+
+
+
+
+
+
+
+
+var PopApp = function PopApp(props) {
+  Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(function () {
+    var data = props.datainitial.postData;
+
+    var lentitems = _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_1___default()(data).length;
+
+    if (lentitems === 0) {
+      props.addPostInitialData(_components_dataInitial__WEBPACK_IMPORTED_MODULE_12__["dataInitial"]);
+    }
+  }, []);
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "jsx-3970954053" + " " + "content-header",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }, __jsx(_components_Header__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    pathname: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  }), __jsx(_components_slide__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    dataSel: "pope",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: this
+  })), __jsx(_components_Notifications__WEBPACK_IMPORTED_MODULE_9__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  }), __jsx("div", {
+    className: "jsx-3970954053" + " " + "container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "jsx-3970954053" + " " + "row",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: this
+  }, __jsx(_components_Title__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: this
+  }, __jsx("h2", {
+    className: "jsx-3970954053",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    },
+    __self: this
+  }, "Previous Rulings")))), __jsx(_components_MiniVote__WEBPACK_IMPORTED_MODULE_11__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: this
+  }), __jsx("div", {
+    className: "jsx-3970954053" + " " + "container cont-new-post",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "jsx-3970954053" + " " + "row",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "jsx-3970954053" + " " + "col s12 m8 l8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41
+    },
+    __self: this
+  }, __jsx("h3", {
+    className: "jsx-3970954053",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
+    },
+    __self: this
+  }, "Is there anyone else you would want us to add?")), __jsx("div", {
+    className: "jsx-3970954053" + " " + "col s12 m4 l4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "jsx-3970954053" + " " + "content-btn",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: this
+  }, __jsx("p", {
+    className: "jsx-3970954053",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46
+    },
+    __self: this
+  }, "Submit a Name"))))), __jsx("div", {
+    className: "jsx-3970954053" + " " + "container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "jsx-3970954053" + " " + "row",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "jsx-3970954053" + " " + "col s12 m9 l9",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "jsx-3970954053" + " " + "content-links-nav",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54
+    },
+    __self: this
+  }, __jsx("a", {
+    href: "#",
+    className: "jsx-3970954053",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55
+    },
+    __self: this
+  }, "Terms and Conditions"), __jsx("a", {
+    href: "#",
+    className: "jsx-3970954053",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56
+    },
+    __self: this
+  }, "Privacy Policy"), __jsx("a", {
+    href: "#",
+    className: "jsx-3970954053",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57
+    },
+    __self: this
+  }, "Contact Us"))), __jsx("div", {
+    className: "jsx-3970954053" + " " + "col s12 m3 l3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 60
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "jsx-3970954053" + " " + "social-links",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61
+    },
+    __self: this
+  }, __jsx("p", {
+    className: "jsx-3970954053",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62
+    },
+    __self: this
+  }, "Folow Us"), __jsx("p", {
+    className: "jsx-3970954053",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63
+    },
+    __self: this
+  }, __jsx("i", {
+    className: "jsx-3970954053" + " " + "fa fa-facebook",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63
+    },
+    __self: this
+  })), __jsx("p", {
+    className: "jsx-3970954053",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 64
+    },
+    __self: this
+  }, __jsx("i", {
+    className: "jsx-3970954053" + " " + "fa fa-twitter",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 64
+    },
+    __self: this
+  })))))), __jsx("div", {
+    className: "jsx-3970954053" + " " + "container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 69
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "jsx-3970954053" + " " + "row",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 70
+    },
+    __self: this
+  })), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    id: "3970954053",
+    __self: this
+  }, ".container{font-family:'Lato',sans-serif;}.container .content-header{position:realtive;width:100vw;}.content-header{height:50rem;}.sidenav-overlay{z-index:8;}.cont-new-post{padding:1rem;}.cont-new-post h3{font-size:15px;font-weight:300;font-stretch:normal;font-style:normal;line-height:0.8;-webkit-letter-spacing:normal;-moz-letter-spacing:normal;-ms-letter-spacing:normal;letter-spacing:normal;text-align:center;color:#333333;}.content-btn{border:solid 1.5px #333333;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;}.content-links-nav{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;}.content-links-nav a{margin-right:1rem;color:black;}.content-links-nav a:hover{-webkit-text-decoration:underline;text-decoration:underline;}.social-links{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;}.social-links p{margin:0rem;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9BcHBsaWNhdGlvbnMvTUFNUC9odGRvY3MvemVtb2dhL3BvcGUtd2ViL3NyYy9hcHAvcGFnZXMvaW5kZXguanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBMEV5QixBQUcwQyxBQUdkLEFBS0osQUFJSixBQUlJLEFBSUUsQUFXWSxBQVFmLEFBTUssQUFLUyxBQUlkLEFBTUQsVUEvQ2IsRUFnREEsQ0FwREEsQUFRQSxFQUlrQixHQWpCTCxBQTBDQSxTQWRDLEdBL0JkLEFBSUEsQUEwQ0EsQ0F6QnNCLG9CQUNGLFNBNEJwQixTQTNCa0IsS0FnQkUsQUFlQSxXQTlCSSxnQkFRSiwwQ0FRUSxBQWVHLDJCQXRCUCxvQkFSSixrQkFDSixjQUNoQiwwQkFjQSxVQWVBLFdBdEJzQiw0RUFDdEIiLCJmaWxlIjoiL0FwcGxpY2F0aW9ucy9NQU1QL2h0ZG9jcy96ZW1vZ2EvcG9wZS13ZWIvc3JjL2FwcC9wYWdlcy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyB1c2VFZmZlY3QgfSBmcm9tICdyZWFjdCdcbmltcG9ydCB7IGJpbmRBY3Rpb25DcmVhdG9ycyB9IGZyb20gJ3JlZHV4J1xuaW1wb3J0IHsgY29ubmVjdCB9IGZyb20gJ3JlYWN0LXJlZHV4J1xuaW1wb3J0IHsgYWRkUG9zdCB9IGZyb20gJy4uL3N0b3JlL2RhdGFQb3N0L2FjdGlvbidcblxuaW1wb3J0IEhlYWRlciBmcm9tICcuLi9jb21wb25lbnRzL0hlYWRlcic7XG5pbXBvcnQgU2xpZGUgZnJvbSAnLi4vY29tcG9uZW50cy9zbGlkZSc7XG5pbXBvcnQgTm90aWZpY2F0aW9ucyBmcm9tICcuLi9jb21wb25lbnRzL05vdGlmaWNhdGlvbnMnO1xuaW1wb3J0IFRpdGlsZSBmcm9tICcuLi9jb21wb25lbnRzL1RpdGxlJztcbmltcG9ydCBNaW5pVm90ZSBmcm9tICcuLi9jb21wb25lbnRzL01pbmlWb3RlJztcblxuaW1wb3J0IHsgZGF0YUluaXRpYWwgfSBmcm9tICcuLi9jb21wb25lbnRzL2RhdGFJbml0aWFsJztcblxuXG5jb25zdCBQb3BBcHAgPSBwcm9wcyA9PiB7XG4gIHVzZUVmZmVjdCgoKSA9PiB7XG4gICAgY29uc3QgZGF0YSA9IHByb3BzLmRhdGFpbml0aWFsLnBvc3REYXRhO1xuICAgIGNvbnN0IGxlbnRpdGVtcyA9IE9iamVjdC5rZXlzKGRhdGEpLmxlbmd0aDtcbiAgICBpZihsZW50aXRlbXMgPT09IDApe1xuICAgICAgcHJvcHMuYWRkUG9zdEluaXRpYWxEYXRhKGRhdGFJbml0aWFsKTtcbiAgICB9XG4gIH0sIFtdKVxuXG4gIHJldHVybiAoXG4gICAgPFJlYWN0LkZyYWdtZW50PlxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJjb250ZW50LWhlYWRlclwiPlxuICAgICAgICA8SGVhZGVyIHBhdGhuYW1lPVwiL1wiLz5cbiAgICAgICAgPFNsaWRlIGRhdGFTZWw9XCJwb3BlXCIvPlxuICAgICAgPC9kaXY+XG4gICAgICA8Tm90aWZpY2F0aW9ucyAvPlxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJjb250YWluZXJcIj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJyb3dcIj5cbiAgICAgICAgICA8VGl0aWxlPlxuICAgICAgICAgICAgPGgyPlByZXZpb3VzIFJ1bGluZ3M8L2gyPlxuICAgICAgICAgIDwvVGl0aWxlPlxuICAgICAgICA8L2Rpdj5cbiAgICAgIDwvZGl2PlxuICAgICAgPE1pbmlWb3RlIC8+XG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRhaW5lciBjb250LW5ldy1wb3N0XCI+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicm93XCI+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJjb2wgczEyIG04IGw4XCI+XG4gICAgICAgICAgICA8aDM+SXMgdGhlcmUgYW55b25lIGVsc2UgeW91IHdvdWxkIHdhbnQgdXMgdG8gYWRkPzwvaDM+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJjb2wgczEyIG00IGw0XCI+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRlbnQtYnRuXCI+XG4gICAgICAgICAgICAgIDxwPlN1Ym1pdCBhIE5hbWU8L3A+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Rpdj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29udGFpbmVyXCI+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicm93XCI+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJjb2wgczEyIG05IGw5XCI+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRlbnQtbGlua3MtbmF2XCI+XG4gICAgICAgICAgICAgIDxhIGhyZWY9XCIjXCI+VGVybXMgYW5kIENvbmRpdGlvbnM8L2E+XG4gICAgICAgICAgICAgIDxhIGhyZWY9XCIjXCI+UHJpdmFjeSBQb2xpY3k8L2E+XG4gICAgICAgICAgICAgIDxhIGhyZWY9XCIjXCI+Q29udGFjdCBVczwvYT5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29sIHMxMiBtMyBsM1wiPlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJzb2NpYWwtbGlua3NcIj5cbiAgICAgICAgICAgICAgPHA+Rm9sb3cgVXM8L3A+XG4gICAgICAgICAgICAgIDxwPjxpIGNsYXNzTmFtZT1cImZhIGZhLWZhY2Vib29rXCI+PC9pPjwvcD5cbiAgICAgICAgICAgICAgPHA+PGkgY2xhc3NOYW1lPVwiZmEgZmEtdHdpdHRlclwiPjwvaT48L3A+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Rpdj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29udGFpbmVyXCI+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicm93XCI+XG4gICAgICAgICAgXG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9kaXY+XG4gICAgICBcbiAgICAgIDxzdHlsZSBqc3ggZ2xvYmFsPntgXG4gICAgICAgIC5jb250YWluZXJ7XG4gICAgICAgICAgZm9udC1mYW1pbHk6ICdMYXRvJywgc2Fucy1zZXJpZjtcbiAgICAgICAgfVxuICAgICAgICAuY29udGFpbmVyIC5jb250ZW50LWhlYWRlcntcbiAgICAgICAgICBwb3NpdGlvbjpyZWFsdGl2ZTtcbiAgICAgICAgICB3aWR0aDoxMDB2dztcbiAgICAgICAgfVxuXG4gICAgICAgIC5jb250ZW50LWhlYWRlcntcbiAgICAgICAgICBoZWlnaHQ6IDUwcmVtO1xuICAgICAgICB9XG5cbiAgICAgICAgLnNpZGVuYXYtb3ZlcmxheXtcbiAgICAgICAgICB6LWluZGV4Ojg7XG4gICAgICAgIH1cblxuICAgICAgICAuY29udC1uZXctcG9zdHtcbiAgICAgICAgICBwYWRkaW5nOiAxcmVtO1xuICAgICAgICB9XG5cbiAgICAgICAgLmNvbnQtbmV3LXBvc3QgaDN7XG4gICAgICAgICAgZm9udC1zaXplOiAxNXB4O1xuICAgICAgICAgIGZvbnQtd2VpZ2h0OiAzMDA7XG4gICAgICAgICAgZm9udC1zdHJldGNoOiBub3JtYWw7XG4gICAgICAgICAgZm9udC1zdHlsZTogbm9ybWFsO1xuICAgICAgICAgIGxpbmUtaGVpZ2h0OiAwLjg7XG4gICAgICAgICAgbGV0dGVyLXNwYWNpbmc6IG5vcm1hbDtcbiAgICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgICAgICAgY29sb3I6ICMzMzMzMzM7XG4gICAgICAgIH1cblxuICAgICAgICAuY29udGVudC1idG4ge1xuICAgICAgICAgIGJvcmRlcjogc29saWQgMS41cHggIzMzMzMzMztcbiAgICAgICAgICBkaXNwbGF5OmZsZXg7XG4gICAgICAgICAgZmxleC1kaXJlY3Rpb246cm93O1xuICAgICAgICAgIGp1c3RpZnktY29udGVudDpjZW50ZXI7XG4gICAgICAgICAgYWxpZ24tY29udGVudDpjZW50ZXI7XG4gICAgICAgIH1cblxuICAgICAgICAuY29udGVudC1saW5rcy1uYXZ7XG4gICAgICAgICAgZGlzcGxheTpmbGV4O1xuICAgICAgICAgIGZsZXgtZGlyZWN0aW9uOnJvdztcbiAgICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6ZmxleC1zdGFydDtcbiAgICAgICAgfVxuXG4gICAgICAgIC5jb250ZW50LWxpbmtzLW5hdiBhe1xuICAgICAgICAgIG1hcmdpbi1yaWdodDoxcmVtO1xuICAgICAgICAgIGNvbG9yOmJsYWNrO1xuICAgICAgICB9XG5cbiAgICAgICAgLmNvbnRlbnQtbGlua3MtbmF2IGE6aG92ZXJ7XG4gICAgICAgICAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7XG4gICAgICAgIH1cblxuICAgICAgICAuc29jaWFsLWxpbmtze1xuICAgICAgICAgIGRpc3BsYXk6ZmxleDtcbiAgICAgICAgICBmbGV4LWRpcmVjdGlvbjpyb3c7XG4gICAgICAgICAganVzdGlmeS1jb250ZW50OnNwYWNlLWJldHdlZW47XG4gICAgICAgIH1cblxuICAgICAgICAuc29jaWFsLWxpbmtzIHAge1xuICAgICAgICAgIG1hcmdpbjowcmVtO1xuICAgICAgICB9XG5cbiAgICAgIGB9PC9zdHlsZT5cbiAgICA8L1JlYWN0LkZyYWdtZW50PlxuICApXG59XG5cblBvcEFwcC5nZXRJbml0aWFsUHJvcHMgPSBhc3luYyAoeyBzdG9yZSwgaXNTZXJ2ZXIgfSkgPT4ge1xuICBjb25zb2xlLmxvZyhzdG9yZSlcbiAgc3RvcmUuZGlzcGF0Y2goYWRkUG9zdChkYXRhSW5pdGlhbCkpXG4gIC8vc3RvcmUuZGlzcGF0Y2goYWRkQ291bnQoKSlcbiAgcmV0dXJuIHsgaXNTZXJ2ZXIgfVxufVxuXG5jb25zdCBtYXBTdGF0ZVRvUHJvcHMgPSAocmVkdWNlcikgPT57XG4gIHJldHVybiB7XG4gICAgZGF0YWluaXRpYWw6IHJlZHVjZXIuZGF0YVBvc3QsXG4gIH1cbn1cblxuY29uc3QgbWFwRGlzcGF0Y2hUb1Byb3BzID0gZGlzcGF0Y2ggPT4ge1xuICByZXR1cm4ge1xuICAgIGFkZFBvc3RJbml0aWFsRGF0YTogYmluZEFjdGlvbkNyZWF0b3JzKGFkZFBvc3QsIGRpc3BhdGNoKSxcbiAgICAvLyBzdGFydENsb2NrOiBiaW5kQWN0aW9uQ3JlYXRvcnMoc3RhcnRDbG9jaywgZGlzcGF0Y2gpLFxuICB9XG59XG5cbmV4cG9ydCBkZWZhdWx0IGNvbm5lY3QobWFwU3RhdGVUb1Byb3BzLCBtYXBEaXNwYXRjaFRvUHJvcHMpKFBvcEFwcClcblxuIl19 */\n/*@ sourceURL=/Applications/MAMP/htdocs/zemoga/pope-web/src/app/pages/index.js */"));
+};
+
+PopApp.getInitialProps = function _callee(_ref) {
+  var store, isServer;
+  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function _callee$(_context) {
+    while (1) {
+      switch (_context.prev = _context.next) {
+        case 0:
+          store = _ref.store, isServer = _ref.isServer;
+          console.log(store);
+          store.dispatch(Object(_store_dataPost_action__WEBPACK_IMPORTED_MODULE_6__["addPost"])(_components_dataInitial__WEBPACK_IMPORTED_MODULE_12__["dataInitial"])); //store.dispatch(addCount())
+
+          return _context.abrupt("return", {
+            isServer: isServer
+          });
+
+        case 4:
+        case "end":
+          return _context.stop();
+      }
+    }
+  });
+};
+
+var mapStateToProps = function mapStateToProps(reducer) {
+  return {
+    datainitial: reducer.dataPost
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    addPostInitialData: Object(redux__WEBPACK_IMPORTED_MODULE_4__["bindActionCreators"])(_store_dataPost_action__WEBPACK_IMPORTED_MODULE_6__["addPost"], dispatch) // startClock: bindActionCreators(startClock, dispatch),
+
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_5__["connect"])(mapStateToProps, mapDispatchToProps)(PopApp));
+
+/***/ })
+
+})
+//# sourceMappingURL=index.js.1e6b818cd2bb7a9e78c3.hot-update.js.map
