@@ -8,7 +8,7 @@ Implementation of html code and model on the design of zemoga:
 
 ### Tech
 
-Dillinger uses a number of open source projects to work properly:
+Pop - WebSite uses a number of open source projects to work properly:
 
 * [Next.JS](https://nextjs.org/) - HTML enhanced for web apps!
 * [Materilize Css](https://materializecss.com/) - great UI boilerplate for modern web apps
