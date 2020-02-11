@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { Navbar, NavItem, Icon } from 'react-materialize';
 
 const Header = (props) => {
-  console.log(props);
   return (
     <header>
       <div className="content-nav">
