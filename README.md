@@ -1,61 +1,43 @@
-# With Firebase Hosting and Docker example
+# Pop - WebSite
 
-The goal is to host the Next.js app on Firebase Cloud Functions with Firebase Hosting rewrite rules so our app is served from our Firebase Hosting URL, with docker support for a consistent development environment. Each individual `page` bundle is served in a new call to the Cloud Function which performs the initial server render. Docker is entirely dedicated for local development and the deployment process and that Firebase itself will not leverage Docker itself.
+[![N|Solid](https://d2eip9sf3oo6c2.cloudfront.net/series/square_covers/000/000/179/square_256/EGH_ReactNextServer_Final.png)](https://nextjs.org/)
 
-This is based off of the work of @jthegedus in the [with-firebase-hosting](https://github.com/zeit/next.js/tree/canary/examples/with-firebase-hosting) example.
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-If you're having issues, feel free to tag @sampsonjoliver in the [issue you create on the next.js repo](https://github.com/zeit/next.js/issues/new)
+Implementation of html code and model on the design of zemoga:
 
-## How to use
+### Tech
 
-### Using `create-next-app`
+Dillinger uses a number of open source projects to work properly:
 
-Execute [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+* [Next.JS](https://nextjs.org/) - HTML enhanced for web apps!
+* [Materilize Css](https://materializecss.com/) - great UI boilerplate for modern web apps
+* [node.js] - evented I/O for the backend
+* [Redux](https://redux.js.org/) - Redux helps you write applications that behave consistently
+* [Jsx](https://reactjs.org/docs/introducing-jsx.html) - Css 
 
-```bash
-npm init next-app --example with-firebase-hosting-and-docker with-firebase-hosting-and-docker-app
-# or
-yarn create next-app --example with-firebase-hosting-and-docker with-firebase-hosting-and-docker-app
+### Installation
+
+Pop - WebSite requires [Node.js](https://nodejs.org/) v12+ to run.
+
+Install the dependencies and devDependencies and start the server.
+
+```sh
+$ cd pope-web
+$ npm run install-deps
+$ npm run dev
 ```
 
-### Download manually
+For production environments...
 
-Download the example:
-
-```bash
-curl https://codeload.github.com/zeit/next.js/tar.gz/canary | tar -xz --strip=2 next.js-canary/examples/with-firebase-hosting-and-docker
-cd with-firebase-hosting-and-docker
+```sh
+$ cd pope-web
+$ npm install --production
+$ npm run build-prod
 ```
 
-Set up firebase:
+Visit the url...
 
-- create a project through the [firebase web console](https://console.firebase.google.com/)
-- grab the projects ID from the web consoles URL: https://console.firebase.google.com/project/<projectId>
-- update the `.env` with your FB_PROJECTID and FIREBASE_TOKEN ( see .env.example )
-- ADD `serviceAccountKey.json` to your project root
-
-### Dev next
-
-```bash
-yarn docker:dev
-open http://localhost:5000
+```sh
+127.0.0.1:5000
 ```
-
-### Firebase serve
-
-```bash
-yarn docker:serve
-open http://localhost:3000
-```
-
-### Firebase deploy
-
-```bash
-yarn docker:deploy
-```
-
-## Important
-
-- The empty `placeholder.html` file is so Firebase Hosting does not error on an empty `public/` folder and still hosts at the Firebase project URL.
-- `firebase.json` outlines the catchall rewrite rule for our Cloud Function.
-- The [Firebase predeploy](https://firebase.google.com/docs/cli/#predeploy_and_postdeploy_hooks) hooks defined in `firebase.json` will handle linting and compiling of the next app and the functions sourceswhen `firebase deploy` is invoked. The only scripts you should need are `docker:dev`, `docker:serve` and `docker:deploy`.
